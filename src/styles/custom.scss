@@ -1,0 +1,312 @@
+body {
+  background-color: #e8f5fd;
+}
+
+/*hide the scroll bar in chrome. for firefox, its kind of more code to write*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+.row-1 {
+  height: 100vh;
+  background-color: #22398e;
+  /*background-blend-mode: screen;*/
+  background-image: linear-gradient(
+      to bottom,
+      rgba(98, 98, 255, 1),
+      rgba(0, 0, 0, 0)
+    ),
+    url('../../images/law.jpg');
+}
+
+.row-1-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 86.1vh;
+}
+
+.row-1-info:hover {
+  cursor: pointer;
+  animation: show-home-message 3s 0.1s forwards;
+  /*animation-name: show-home-message;*/
+  /*animation-duration: 3s;*/
+  /*animation-delay: 0.1s;*/
+  /*animation-fill-mode: forwards;*/
+}
+
+.row-1-info > .info-detail {
+  font-size: 1.3rem;
+  color: #f4c519 !important;
+}
+
+.row-1-info > .info-header {
+  font-size: 1.3rem;
+}
+
+@keyframes show-home-message {
+  from {
+    opacity: 1;
+  }
+  to {
+    background-color: rgb(157, 157, 255);
+    opacity: 0.5;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+#navbarNav {
+  width: 50%;
+}
+
+nav .nav-link:hover {
+  border-bottom: 2px solid white !important;
+  padding-bottom: 0;
+}
+
+nav a:hover:after {
+  content: '';
+  border-bottom: 1px solid #17174a;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+}
+
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.brand-yellow {
+  color: #f8c800 !important;
+  font-size: 2rem;
+}
+
+/* row 1 icons */
+
+.bot-icon-land {
+  width: 30%;
+}
+
+.bot-icon-land:hover {
+  animation: row-1-icon-hover-effect 1.5s 0.1s forwards;
+}
+
+.social-icon {
+  width: 1.3em;
+  /*-webkit-filter: invert(70%);*/
+  -webkit-filter: invert(3) sepia() saturate(400) hue-rotate(3.142rad);
+}
+
+.social-icon:hover {
+  -webkit-filter: invert(100%);
+}
+
+.social-icons a:hover {
+  text-decoration: none;
+}
+
+@keyframes row-1-icon-hover-effect {
+  0% {
+    width: 30%;
+  }
+  50% {
+    width: 40%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+/* CSS FOR THE SECOND ROW OF THE HOME PAGE*/
+
+.row-2 {
+  /*height: 140vh;*/
+}
+
+.row-2-right {
+  border-left: 1px solid #888888;
+  /*box-shadow: -2px 2px 2px #888888;*/
+  background-blend-mode: screen;
+}
+
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.register {
+  width: 100%;
+  min-height: 40%;
+  background-color: rgb(246, 250, 255);
+}
+
+.bot-icon {
+  max-width: 100%;
+}
+
+.bot-icon:hover {
+  cursor: zoom-in;
+  animation: icon-hover-effect 1.5s 0.1s forwards;
+}
+
+.inverted-color {
+  /*-webkit-filter: invert(100%) sepia() saturate(1000%) hue-rotate(40deg);*/
+  -webkit-filter: invert(100%);
+}
+
+.icon-container > a:hover {
+  text-decoration: none;
+  color: #1f368b;
+}
+
+@keyframes icon-hover-effect {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.bot-next-icon {
+  max-width: 100%;
+}
+
+.icon-container {
+  width: 10%;
+  font-weight: lighter;
+}
+
+.dot {
+  height: 35px;
+  width: 35px;
+  font-weight: bolder;
+  color: #000;
+  background-color: #f8c800;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.register > .header {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.horizontal-r {
+  border: 0.5px solid rgb(32, 32, 104);
+}
+
+/* CSS FOR THE THIRD ROW OF THE HOME PAGE*/
+
+.row-3 {
+  height: 50vh;
+}
+.stat-data:last-child {
+  border-right: 0px !important;
+}
+
+.data-area {
+  height: 100%;
+}
+
+.stat-data {
+  border-right: 1px dashed black;
+  min-height: 100%;
+}
+
+/* CSS FOR THE FOURTH ROW OF THE HOME PAGE*/
+
+.row-4 {
+}
+
+.facebook-feed,
+.why-we-do-card {
+  -webkit-box-shadow: -4px 5px 115px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 5px 115px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px 5px 115px -7px rgba(0, 0, 0, 0.75);
+}
+
+.facebook-feed {
+  background-image: url('../../images/loading.gif');
+  background-repeat: no-repeat;
+  background-size: 90px;
+  background-position: center;
+  width: 500px;
+}
+
+.why-we-do-card {
+  padding: 1.5em;
+  align-items: center;
+  text-align: justify;
+  min-height: 82.5%;
+  max-height: 82.5%;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+/*---------------------------------------------------------------------------*/
+.why-we-do-card {
+  border: 0px;
+  position: relative;
+  width: 100%;
+  /*padding: 1em 1.5em;*/
+  /*margin: 2em auto;*/
+  color: #fff;
+  background: #4e4eff;
+}
+
+.why-we-do-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 50px 50px 0;
+  border-style: solid;
+  border-color: #4e4eff #bec9d0;
+  display: block;
+  width: 0;
+  box-shadow: -4px 5px 115px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3), -5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*---------------------------------------------------------------------------*/
+
+.why-we-do-card > .card-header {
+}
+
+.why-we-do-card > .card-header:before {
+}
+
+.why-we-do-card .blockquote {
+  font-weight: lighter;
+  overflow-y: scroll;
+}
+
+/* FOOTER STYLING */
+
+footer {
+  min-height: 20vh;
+  background-color: #002d30;
+}
+
+.credit-icon-author {
+  font-size: 10px;
+}

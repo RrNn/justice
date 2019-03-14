@@ -9554,7 +9554,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }body {
-  background-color: #e8f5fd;
+  background-color: #e4e4f7;
 }
 
 /*hide the scroll bar in chrome. for firefox, its kind of more code to write*/
@@ -9563,10 +9563,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .row-1 {
-  height: 100vh;
+  /*height: 100vh;*/
   background-color: #22398e;
-  /*background-blend-mode: screen;*/
-  background-image: linear-gradient(to bottom, #6262ff, rgba(0, 0, 0, 0)), url("../../images/law.jpg");
+  background-image: linear-gradient(0deg, #1f358a, rgba(0, 0, 0, 0) 50%, #1f358a), url("../../images/handshake.png");
 }
 
 .row-1-info {
@@ -9574,17 +9573,10 @@ a.text-dark:hover, a.text-dark:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 86.1vh;
 }
 
 .row-1-info:hover {
   cursor: pointer;
-  -webkit-animation: show-home-message 3s 0.1s forwards;
-          animation: show-home-message 3s 0.1s forwards;
-  /*animation-name: show-home-message;*/
-  /*animation-duration: 3s;*/
-  /*animation-delay: 0.1s;*/
-  /*animation-fill-mode: forwards;*/
 }
 
 .row-1-info > .info-detail {
@@ -9596,25 +9588,6 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 1.3rem;
 }
 
-@-webkit-keyframes show-home-message {
-  from {
-    opacity: 1;
-  }
-  to {
-    background-color: #9d9dff;
-    opacity: 0.5;
-  }
-}
-
-@keyframes show-home-message {
-  from {
-    opacity: 1;
-  }
-  to {
-    background-color: #9d9dff;
-    opacity: 0.5;
-  }
-}
 nav {
   display: flex;
   justify-content: space-around;
@@ -9622,10 +9595,51 @@ nav {
   margin: auto;
 }
 
-#navbarNav {
-  width: 50%;
-}
+@media only screen and (max-width: 600px) {
+  body {
+    max-width: 100vw !important;
+  }
 
+  nav {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .facebook-feed,
+.twitter-feed {
+    width: 80vw !important;
+  }
+
+  .facebook-feed > iframe {
+    width: 80vw;
+  }
+
+  .why-we-do-card {
+    width: 80vw !important;
+  }
+
+  .row-3 {
+    margin-bottom: 220px;
+  }
+
+  .row-3 > .row {
+    display: block;
+  }
+
+  .stat-data {
+    border: none !important;
+  }
+
+  .horizontal-r {
+    display: none;
+  }
+
+  .land-legal-business-lawyer-wrapper {
+    height: 140vh !important;
+  }
+}
 nav .nav-link:hover {
   border-bottom: 2px solid white !important;
   padding-bottom: 0;
@@ -9637,10 +9651,11 @@ nav a:hover:after {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 5px;
+  bottom: 10px;
 }
 
 .wrapper {
+  height: 80%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -9651,18 +9666,17 @@ nav a:hover:after {
 }
 
 /* row 1 icons */
-.bot-icon-land {
-  width: 30%;
+.bot-icon-row-1 {
+  width: 10%;
 }
 
-.bot-icon-land:hover {
+.bot-icon-row-1:hover {
   -webkit-animation: row-1-icon-hover-effect 1.5s 0.1s forwards;
           animation: row-1-icon-hover-effect 1.5s 0.1s forwards;
 }
 
 .social-icon {
   width: 1.3em;
-  /*-webkit-filter: invert(70%);*/
   -webkit-filter: invert(3) sepia() saturate(400) hue-rotate(3.142rad);
 }
 
@@ -9676,36 +9690,67 @@ nav a:hover:after {
 
 @-webkit-keyframes row-1-icon-hover-effect {
   0% {
-    width: 30%;
+    width: 10%;
   }
   50% {
-    width: 40%;
+    width: 20%;
   }
   100% {
-    width: 30%;
+    width: 15%;
   }
 }
 
 @keyframes row-1-icon-hover-effect {
   0% {
-    width: 30%;
+    width: 10%;
   }
   50% {
-    width: 40%;
+    width: 20%;
   }
   100% {
-    width: 30%;
+    width: 15%;
   }
 }
+.recommend {
+  background-color: #f7c300;
+  border: none;
+  color: blue;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 100px;
+}
+
+.recommend:hover {
+  color: blue;
+}
+
+.mission-statement {
+  font-size: 26px;
+  color: white;
+}
+
 /* CSS FOR THE SECOND ROW OF THE HOME PAGE*/
 .row-2 {
   /*height: 140vh;*/
 }
 
+.land-legal-business-lawyer-wrapper {
+  border-radius: 100% 0% 97% 3%/0% 100% 0% 100%;
+  background-image: linear-gradient(45deg, #1f358a, rgba(0, 0, 0, 0) 50%, #1f358a), url("../../images/textured.png");
+  height: 80vh;
+}
+
 .row-2-right {
+  height: 50%;
   border-left: 1px solid #888888;
-  /*box-shadow: -2px 2px 2px #888888;*/
   background-blend-mode: screen;
+}
+
+.team-pic {
+  height: 70vh;
 }
 
 .carousel-item::after {
@@ -9715,10 +9760,11 @@ nav a:hover:after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  background: linear-gradient(to top, rgba(0, 0, 50, 0.6), rgba(0, 0, 0, 0));
 }
 
 .register {
+  border-radius: 99% 1% 97% 3%/5% 77% 23% 95%;
   width: 100%;
   min-height: 40%;
   background-color: #f6faff;
@@ -9816,7 +9862,8 @@ nav a:hover:after {
 
 /* CSS FOR THE FOURTH ROW OF THE HOME PAGE*/
 .facebook-feed,
-.why-we-do-card {
+.why-we-do-card,
+.twitter-feed {
   box-shadow: -4px 5px 115px -7px rgba(0, 0, 0, 0.75);
 }
 
@@ -9826,27 +9873,34 @@ nav a:hover:after {
   background-size: 90px;
   background-position: center;
   width: 500px;
+  height: 95%;
+}
+
+.twitter-feed {
+  background-image: url("../../images/loading.gif");
+  background-repeat: no-repeat;
+  background-size: 90px;
+  background-position: center;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+  min-height: 315px;
 }
 
 .why-we-do-card {
   padding: 1.5em;
   align-items: center;
   text-align: justify;
-  min-height: 82.5%;
-  max-height: 82.5%;
   border-radius: 0px;
   overflow: hidden;
 }
 
-/*---------------------------------------------------------------------------*/
 .why-we-do-card {
   border: 0px;
   position: relative;
   width: 100%;
-  /*padding: 1em 1.5em;*/
-  /*margin: 2em auto;*/
   color: #fff;
-  background: #4e4eff;
+  background: #0e2570;
 }
 
 .why-we-do-card:before {
@@ -9856,25 +9910,38 @@ nav a:hover:after {
   right: 0;
   border-width: 0 50px 50px 0;
   border-style: solid;
-  border-color: #4e4eff #bec9d0;
+  border-color: #0e2570 #c7c7d9;
   display: block;
   width: 0;
   box-shadow: -4px 5px 115px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3), -5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-/*---------------------------------------------------------------------------*/
 .why-we-do-card .blockquote {
   font-weight: lighter;
-  overflow-y: scroll;
+}
+
+.why-we-do-card > p {
+  font-weight: bold;
 }
 
 /* FOOTER STYLING */
 footer {
   min-height: 20vh;
-  background-color: #002d30;
+  background-color: #11266c;
+}
+
+.footer-content > a {
+  color: white;
+}
+
+.supporters {
+  width: 5em;
+  height: 3em;
 }
 
 .credit-icon-author {
-  font-size: 10px;
+  font-size: 8px;
+  position: absolute;
+  right: 10px;
 }
